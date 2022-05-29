@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bg-white shadow rounded-lg p-6">
+      <div id="message"></div>
+      <div class="grid lg:grid-cols-2 gap-6">
+        <div
+          class="border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1"
+        >
+          <div class="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+            <p>
+              <label for="name" class="bg-white text-gray-600 px-1"
+                >BOOK NAME *</label
+              >
+            </p>
+          </div>
+          <p>
+            <input
+              id="name"
+              autocomplete="false"
+              tabindex="0"
+              type="text"
+              class="py-1 px-1 text-gray-900 outline-none block h-full w-full"
+            />
+          </p>
+        </div>
+        <div
+          class="border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1"
+        >
+          <div class="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+            <p>
+              <label for="lastname" class="bg-white text-gray-600 px-1"
+                >AUTHOR NAME*</label
+              >
+            </p>
+          </div>
+          <p>
+            <input
+              id="author"
+              autocomplete="false"
+              tabindex="0"
+              type="text"
+              class="py-1 px-1 outline-none block h-full w-full"
+            />
+          </p>
+        </div>
+        <div
+          class="border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1"
+        >
+          <div class="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+            <p>
+              <label for="username" class="bg-white text-gray-600 px-1"
+                >TYPE *</label
+              >
+            </p>
+          </div>
+          <p>
+            <input
+              id="type"
+              autocomplete="false"
+              tabindex="0"
+              type="text"
+              class="py-1 px-1 outline-none block h-full w-full"
+            />
+          </p>
+        </div>
+        <div
+          class="border focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1"
+        >
+          <div class="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+            <p>
+              <label for="password" class="bg-white text-gray-600 px-1"
+                >KEYWORD*</label
+              >
+            </p>
+          </div>
+          <p>
+            <input
+              id="keyword"
+              autocomplete="false"
+              tabindex="0"
+              type="text"
+              class="py-1 px-1 outline-none block h-full w-full"
+            />
+          </p>
+        </div>
+      </div>
+      <div class="border-t mt-6 pt-3">
+        <button
+            id="add-book"
+            class="rounded text-gray-100 px-3 py-1 bg-blue-500 hover:shadow-inner hover:bg-blue-700 transition-all duration-300"
+        >
+          ADD BOOK
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 min-h-screen">
+        <div>
+          <div class="p-4">
+            <div class="bg-white p-4 rounded-md">
+              <div>
+                <h2 class="mb-4 text-xl font-bold text-gray-700">Your Books</h2>
+                <div>
+                  <div>
+                    <div class="flex justify-between bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-md py-2 px-4 text-white font-bold text-md">
+                      <div>
+                        <span>Name</span>
+                      </div>
+                      <div>
+                        <span>Author</span>
+                      </div>
+                      <div>
+                        <span>Type</span>
+                      </div>
+                      <div>
+                        <span>Time</span>
+                      </div>
+                    </div>
+                    <div id="tbody"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+  <script src="app.js"></script>
+</html>
